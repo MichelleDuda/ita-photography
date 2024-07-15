@@ -80,4 +80,24 @@ nav {
 /*Main Content Styles */
 main {
     margin-top: 107px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
