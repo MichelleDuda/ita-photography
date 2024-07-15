@@ -48,9 +48,19 @@ header {
     box-shadow: 0 2px 2px #f1eded;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a:hover {
+    border-bottom: 2px solid #252525;
+}
+
 #menu {
     list-style-type: none;
 }
+
 
 /* Navbar styles with dropdown toggle */
 nav {
@@ -120,7 +130,11 @@ main {
 }
 
 #photos {
-    line-height: 0;
+    line-height: 2;
+}
+
+#photos img {
+    border: 2px solid #252525;
 }
 
 /* Footer */
@@ -137,3 +151,45 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu >li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin-left: 0.5rem;
+    }
+
+    /* Main Content */
+
+    main {
+        /* push content down to accomodate larger header */
+        margin-top: 135px;
+    }
+
+    /* Gallery Page */
+    #photos {
+        columns: 3;
+        column-gap: 1;
+    }
