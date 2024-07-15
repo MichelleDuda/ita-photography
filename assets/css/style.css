@@ -1,0 +1,83 @@
+/* Import Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Parisienne&display=swap');
+
+/* Asterisk wildcard selector to override default styles by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hidden-heading {
+    display: none;
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    color: #252525;
+}
+
+h1 {
+    font-family: 'Parisienne', sans-serif;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+h2,
+h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    box-shadow: 0 2px 2px #f1eded;
+}
+
+#menu {
+    list-style-type: none;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/*Main Content Styles */
+main {
+    margin-top: 107px;
+}
